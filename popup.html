@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conectome</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            margin: 10px 5px;
+        }
+        input[type="text"], input[type="file"] {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>conectome v0.0.1</h1>
+    <p>Simple testing tool in the browser</p>
+    
+    <!-- TitleとExplanation入力フォーム -->
+    <label for="title-input">Title:</label>
+    <input type="text" id="title-input" name="title" placeholder="Enter a title">
+    <br>
+    <label for="explanation-input">Explanation:</label>
+    <input type="text" id="explanation-input" name="explanation" placeholder="Enter an explanation">
+    <br>
+
+    <label for="url-input">Enter a URL:</label>
+    <input type="url" id="url-input" name="url" placeholder="https://example.com">
+    <button type="button" id="submit-button">Submit</button>
+    <button type="button" id="download-button">Download JSON</button>
+    <br>
+
+    <!-- ファイルアップロード用 -->
+    <label for="upload-input">Upload JSON:</label>
+    <input type="file" id="upload-input" accept=".json">
+    <button type="button" id="upload-button">Upload and Display</button>
+
+    <!-- テーブル -->
+    <table id="event-table">
+        <thead>
+            <tr>
+                <th>Event Type</th>
+                <th>Timestamp</th>
+                <th>XPath</th>
+                <th>Additional Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- イベントデータがここに追加されます -->
+        </tbody>
+    </table>
+
+    <!-- ページネーション -->
+    <div id="pagination">
+        <button id="prev-button">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-button">Next</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
