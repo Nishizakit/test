@@ -53,6 +53,7 @@
         <thead>
             <tr>
                 <th>Event Type</th>
+                <th>Tag</th>
                 <th>Timestamp</th>
                 <th>XPath</th>
                 <th>Additional Details</th>
@@ -70,6 +71,13 @@
         <button id="next-button">Next</button>
     </div>
 
+    <!-- 記録状態表示 -->
+    <div id="recording-status" style="margin: 10px 0; font-weight: bold;">記録停止</div>
+    
+    <!-- モジュラー構造のJavaScriptファイル -->
+    <script src="recording-handler.js"></script>
+    <script src="playback-handler.js"></script>
+    <script src="ui-handler.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>
